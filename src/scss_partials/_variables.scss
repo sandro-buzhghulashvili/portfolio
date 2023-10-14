@@ -1,0 +1,12 @@
+$primary-font :'Roboto', sans-serif;
+$font-weights : (
+    "regular" : 400,
+    "medium" : 500,
+    "bold" : 700
+);
+$primary-color : #2d2e32;
+
+
+@function weight($weight) {
+    @return map-get($font-weights, $weight )
+}
