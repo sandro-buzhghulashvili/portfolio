@@ -1,0 +1,107 @@
+@import "../scss_partials/variables";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    color: $primary-color;
+
+    .content {
+        max-width: 65%;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            height: 350px;
+            width: 350px;
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            border: 3px solid $primary-color;
+            animation: borderAnimation 2s ease infinite alternate-reverse;
+        }
+
+        .info {
+            max-width: 50%;
+            h1 {
+                font-size: 55px;
+                font-weight: weight(bold);
+                margin-bottom: 30px;
+            }
+            p {
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-size: 1.9rem;
+                margin-right: 20px;
+                transition: .5s;
+
+                @media (min-width: query(small)) {
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive 
+
+    @media screen and (max-width: query(medium)) {
+        padding: 150px 0;
+        height: auto;
+
+        .content {
+            max-width: 100%;
+        }
+
+        .hero {
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100%;
+
+            img {
+                height: 350px;
+                width: 350px;
+                margin-bottom: 50px;
+            }
+
+            .info {
+                max-width: 80%;
+                text-align: center;
+            }
+        }
+    }
+
+    @media screen and (max-width : query(small)) {
+        .content {
+            max-width: 100%;
+        }
+
+        .hero {
+            .info {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@keyframes borderAnimation {
+    from {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    } to {
+        border-radius: 60% 30% 70% 40%/60% 40% 30% 70%;
+    }
+}

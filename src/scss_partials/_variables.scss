@@ -6,6 +6,14 @@ $font-weights : (
 );
 $primary-color : #2d2e32;
 $hover-color : #147efb;
+$media-queries : (
+    "medium" : 920px,
+    "small" : 517px
+);
+
+@function query($query) {
+    @return map-get($media-queries, $query )
+}
 
 
 @function weight($weight) {
