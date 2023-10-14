@@ -28,7 +28,12 @@
             a {
                 font-weight: weight(bold);
                 text-decoration: none;
+                transition: .5s;
                 color: $primary-color;
+
+                &:hover {
+                    color: $hover-color;
+                }
             }
         }
     }
@@ -42,31 +47,82 @@
             cursor: pointer;
             padding: 20px;
             position: relative;
+            z-index: 2;
+
+            &:hover{
+                &::after, &::before {
+                    background-color: $hover-color;
+                }
+            }
 
             &::before {
                 content: "";
                 position: absolute;
-                top: 0;
+                top: 50%;
                 left: 0;
-                margin: auto 0;
-                width: 30px;
+                right: 0;
+                margin: auto;
+                width: 40px;
                 height: 4px;
                 background-color: $primary-color;
+                transform: translateY(-10px);
+                transition: .5s;
             }
 
             &::after {
                 content: "";
                 position: absolute;
-                top: 10px;
+                top: 50%;
                 left: 0;
+                right: 0;
                 width: 30px;
                 height: 4px;
                 background-color: $primary-color;
+                transition: .5s;
+            }
+
+            &.close::before {
+                width: 30px;
+                transform: translateY(0);
+                transform: rotate(-225deg);
+                margin: 0;
+            }
+            &.close::after {
+                width: 30px;
+                transform: rotate(225deg);
             }
         }
         
         ul {
-            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: .5s;
+
+            &.toggle {
+                left: 0;
+            }
+
+            li {
+                margin: 35px 0;
+            }
+
+            li a {
+                font-size: 24px;
+                font-weight: weight(medium);
+                transition: .5s;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
         }
     }
 }
