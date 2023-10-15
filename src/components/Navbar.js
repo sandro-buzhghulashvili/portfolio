@@ -1,18 +1,32 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import classes from './Navbar.module.scss';
 
 const Navbar = () => {
-  const [toggleNavbar,setToggleNavbar] = useState(false)
+  const [toggleNavbar, setToggleNavbar] = useState(false);
 
   const toggleNavbarHandler = () => {
-    setToggleNavbar(prevValue => !prevValue)
-  }
+    setToggleNavbar((prevValue) => !prevValue);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <div className={classes.navbar}>
-      <h1 className={classes.header}>Sandro.dev</h1>
-      <span onClick={toggleNavbarHandler} className={`${classes.menu} ${toggleNavbar ? classes.close : undefined}`}></span>
+      <h1 onClick={scrollToTop} className={classes.header}>
+        Sandro.dev
+      </h1>
+      <span
+        onClick={toggleNavbarHandler}
+        className={`${classes.menu} ${
+          toggleNavbar ? classes.close : undefined
+        }`}
+      ></span>
       <ul className={toggleNavbar ? classes.toggle : undefined}>
         <li onClick={toggleNavbarHandler}>
           <a href="#">Home</a>
