@@ -16,6 +16,21 @@ const Navbar = () => {
     });
   };
 
+  const scrollToSection = (section) => {
+    setToggleNavbar((prevValue) => !prevValue);
+
+    const sectionContainer = document.getElementById(section);
+
+    if (section === 'home') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      sectionContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={classes.navbar}>
       <h1 onClick={scrollToTop} className={classes.header}>
@@ -28,17 +43,17 @@ const Navbar = () => {
         }`}
       ></span>
       <ul className={toggleNavbar ? classes.toggle : undefined}>
-        <li onClick={toggleNavbarHandler}>
-          <a href="#">Home</a>
+        <li onClick={() => scrollToSection('home')}>
+          <a href="#nav">Home</a>
         </li>
-        <li onClick={toggleNavbarHandler}>
-          <a href="#">About</a>
+        <li onClick={() => scrollToSection('aboutMe')}>
+          <a href="#nav">About</a>
         </li>
-        <li onClick={toggleNavbarHandler}>
-          <a href="#">Projects</a>
+        <li onClick={() => scrollToSection('projects')}>
+          <a href="#nav">Projects</a>
         </li>
-        <li onClick={toggleNavbarHandler}>
-          <a href="#">Contact</a>
+        <li onClick={() => scrollToSection()}>
+          <a href="#nav">Contact</a>
         </li>
       </ul>
     </div>

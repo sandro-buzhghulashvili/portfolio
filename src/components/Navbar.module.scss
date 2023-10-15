@@ -2,7 +2,7 @@
 
 .navbar {
     position: fixed;
-    z-index: 3;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,8 +37,11 @@
                 transition: .5s;
                 color: $primary-color;
 
-                &:hover {
-                    color: $hover-color;
+                @media(min-width: query(small)) {
+                    &:hover {
+                        color: $hover-color;
+                    }
+    
                 }
             }
         }
@@ -55,9 +58,11 @@
             position: relative;
             z-index: 2;
 
-            &:hover{
-                &::after, &::before {
-                    background-color: $hover-color;
+            @media(min-width: query(small)) {
+                &:hover{
+                    &::after, &::before {
+                        background-color: $hover-color;
+                    }
                 }
             }
 
@@ -125,8 +130,11 @@
                 font-weight: weight(medium);
                 transition: .5s;
 
-                &:hover {
-                    color: $hover-color;
+                @media(min-width: query(small)) {
+                    &:hover {
+                        color: $hover-color;
+                    }
+    
                 }
             }
         }

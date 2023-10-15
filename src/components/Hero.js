@@ -10,6 +10,7 @@ import cssImg from '../assets/skillset-photos/css.png';
 import jsImg from '../assets/skillset-photos/js.png';
 import reactImg from '../assets/skillset-photos/react.png';
 import sassImg from '../assets/skillset-photos/sass.png';
+import gitImg from '../assets/skillset-photos/git.png';
 
 const Hero = () => {
   return (
@@ -28,10 +29,10 @@ const Hero = () => {
               look great but also function flawlessly.
             </motion.p>
             <div>
-              <a href="#">
+              <a href="#link">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="#">
+              <a href="#link">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
@@ -55,6 +56,9 @@ const Hero = () => {
             </li>
             <li>
               <img src={sassImg} alt="skill" />
+            </li>
+            <li>
+              <img src={gitImg} alt="skill" />
             </li>
           </ul>
         </div>

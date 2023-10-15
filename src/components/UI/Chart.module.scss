@@ -1,0 +1,12 @@
+@import "../../scss_partials/variables";
+
+.charts {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 300px;
+
+    @media(max-width : 850px) {
+        display: none;
+    }
+}
+

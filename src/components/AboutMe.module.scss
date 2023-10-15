@@ -1,0 +1,62 @@
+@import "../scss_partials/variables";
+
+.about {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    margin-bottom: 200px;
+    color: $primary-color;
+
+    .card {
+        width: 400px;
+        font-size: 18px;
+
+        span {
+            display: inline-block;
+            font-weight: weight(bold);
+            color: $hover-color;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+    }
+
+    img {
+        width: 410px;
+        height: 350px;
+        border: 3px solid $primary-color;
+        border-radius: 20px;
+        margin-right: 100px;
+    }
+
+    // Responsive
+
+    @media screen and (max-width: 925px) {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width : query(small)) {
+        img {
+            width: 90%;
+            height: 250px;
+        }
+
+        .card {
+            width: 90%;
+        }
+    }
+}
