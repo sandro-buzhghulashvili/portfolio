@@ -1,0 +1,21 @@
+@import "../scss_partials/variables";
+
+.projects {
+    max-width: 1024px;
+    margin: auto;
+    color: $primary-color;
+
+    span {
+        display: inline-block;
+        color: $hover-color;
+        font-weight: weight(bold);
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        font-weight: weight(bold);
+        margin-bottom: 100px;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../scss_partials/variables";
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    max-height: 430px;
+    width: 990px;
+    margin: 50px auto;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    img {
+        object-fit: cover;
+        border-radius: 20px;
+        width: 55%;
+        height: 1500px;
+        transition: 4s;
+
+        &.animate-img {
+            transform: translateY(-1000px);
+        }
+    }
+
+    .info {
+        width: 40%;
+        text-align: center;
+        align-self: center;
+
+        .warning {
+            color: orange;
+            font-weight: weight(bold);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: weight(regular);
+            margin-bottom: 40px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            font-size: 22px;
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-weight: weight(medium);
+                transition: .5s;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
