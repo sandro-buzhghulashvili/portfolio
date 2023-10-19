@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -6,25 +7,13 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import classes from './Project.module.scss';
 
 const Project = ({ img, title, description, link, source }) => {
-  const [animate, setAnimate] = useState(false);
-
-  const enableAnimation = () => {
-    setAnimate(true);
-  };
-
-  const disableAnimation = () => {
-    setAnimate(false);
-  };
-
   return (
-    <div className={`${classes.project}`}>
-      <img
-        onMouseEnter={enableAnimation}
-        onMouseLeave={disableAnimation}
-        className={animate ? classes['animate-img'] : undefined}
-        src={img}
-        alt="project"
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className={`${classes.project}`}
+    >
+      <img src={img} alt="project" />
       <div className={classes.info}>
         <h1>{title}</h1>
         <p>{description}</p>
@@ -43,7 +32,7 @@ const Project = ({ img, title, description, link, source }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
