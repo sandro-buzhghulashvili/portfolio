@@ -20,7 +20,7 @@ export const PROJECTS = [
     User experience is more delicated, as it offers interactive map features to select pick up and drop off locations.
     All data comes from firebase realtime database, so every order or change that you make will be tracked and saved in real time`,
     img: carRentalImg,
-    link: 'https://camp-mate.onrender.com/',
+    link: 'https://car-rental-6eaf1.firebaseapp.com',
     source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
   },
 ];

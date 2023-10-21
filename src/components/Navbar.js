@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <h1 onClick={scrollToTop} className={classes.header}>
-        Sandro.dev
+        Sandro buzhgulashvili
       </h1>
       <span
         onClick={toggleNavbarHandler}
