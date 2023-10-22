@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './Navbar.module.scss';
 
-const Navbar = () => {
+const Navbar = ({ hideSections }) => {
   const [toggleNavbar, setToggleNavbar] = useState(false);
 
   const toggleNavbarHandler = () => {
@@ -22,10 +23,7 @@ const Navbar = () => {
     const sectionContainer = document.getElementById(section);
 
     if (section === 'home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+      scrollToTop();
     } else {
       sectionContainer.scrollIntoView({ behavior: 'smooth' });
     }
@@ -34,7 +32,7 @@ const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <h1 onClick={scrollToTop} className={classes.header}>
-        Sandro buzhgulashvili
+        Sandro.bgi
       </h1>
       <span
         onClick={toggleNavbarHandler}
@@ -44,17 +42,21 @@ const Navbar = () => {
       ></span>
       <ul className={toggleNavbar ? classes.toggle : undefined}>
         <li onClick={() => scrollToSection('home')}>
-          <a href="#nav">Home</a>
+          <Link to="/">Home</Link>
         </li>
-        <li onClick={() => scrollToSection('aboutMe')}>
-          <a href="#nav">About</a>
-        </li>
-        <li onClick={() => scrollToSection('projects')}>
-          <a href="#nav">Projects</a>
-        </li>
-        <li onClick={() => scrollToSection()}>
-          <a href="#nav">Contact</a>
-        </li>
+        {!hideSections && (
+          <>
+            <li onClick={() => scrollToSection('aboutMe')}>
+              <a href="#nav">About</a>
+            </li>
+            <li onClick={() => scrollToSection('projects')}>
+              <a href="#nav">Projects</a>
+            </li>
+            <li onClick={() => scrollToSection()}>
+              <a href="#nav">Contact</a>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   );

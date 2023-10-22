@@ -1,18 +1,27 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import AboutMe from './components/AboutMe';
-import Projects from './components/Projects';
+import HomePage from './pages/Home';
+import LayoutPage from './pages/Layout';
+import ProjectsPage from './pages/Projects';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './pages/Error';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <LayoutPage />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <HomePage /> },
+      {
+        path: 'projects',
+        element: <ProjectsPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <AboutMe />
-      <Projects />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

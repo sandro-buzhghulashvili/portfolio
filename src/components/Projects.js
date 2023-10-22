@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import classes from './Projects.module.scss';
 import Project from './Project';
 import { PROJECTS } from '../assets/PROJECTS';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const allProjects = PROJECTS.map((project) => {
@@ -28,6 +29,13 @@ const Projects = () => {
       <span>PROJECTS</span>
       <h1>Each project is a unique piece of development</h1>
       {allProjects}
+      <Link
+        to="/projects"
+        className={classes['show-projects']}
+        href="#projects"
+      >
+        See more projects
+      </Link>
     </motion.div>
   );
 };

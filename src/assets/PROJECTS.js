@@ -1,5 +1,7 @@
 import campMateImg from '../assets/project-photos/campmate1.png';
 import carRentalImg from '../assets/project-photos/car-rental2.png';
+import coinPulseImg from '../assets/project-photos/coinpulse2.png';
+import todoAppImg from '../assets/project-photos/todo.png';
 
 export const PROJECTS = [
   {
@@ -22,5 +24,24 @@ export const PROJECTS = [
     img: carRentalImg,
     link: 'https://car-rental-6eaf1.firebaseapp.com',
     source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
+  },
+  {
+    id: 'p3',
+    title: 'COINPULSE',
+    description: `Welcome to our cutting-edge Crypto Search Web App! Designed with cryptocurrency enthusiasts and investors in mind, our platform is
+    your one-stop solution for staying informed in the dynamic world of digital assets.With our user-friendly interface, you can effortlessly check the latest market
+    updates and track specific currencies in real-time.`,
+    img: coinPulseImg,
+    link: 'https://coinpulse-50f2d.web.app',
+    source: 'https://github.com/sandro-buzhghulashvili/coin-pulse-react',
+  },
+  {
+    id: 'p4',
+    title: 'TODO APP',
+    description: `This todo app offers user to add,manage and classify tasks. It uses local storage, so every task will be saved. App also gives us fancy ways to filter
+    tasks by their category.`,
+    img: todoAppImg,
+    link: 'https://todo-app-683e5.web.app',
+    source: 'https://github.com/sandro-buzhghulashvili/todo-react',
   },
 ];

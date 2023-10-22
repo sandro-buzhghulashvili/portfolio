@@ -3,7 +3,28 @@
 .projects {
     max-width: 1024px;
     margin: auto;
+    margin-bottom: 200px;
     color: $primary-color;
+
+    .show-projects {
+        display: block;
+        margin: auto;
+        width: fit-content;
+        text-decoration: none;
+        padding: 20px 30px;
+        border: 2px solid $hover-color;
+        font-weight: weight(bold);
+        color: $hover-color;
+        border-radius: 20px;
+        transition:  .5s;
+
+        @media(min-width: query(small)) {
+            &:hover {
+                background-color: $hover-color;
+                color: #fff;
+            }
+        }
+    }
 
     span {
         display: inline-block;
@@ -24,6 +45,7 @@
     @media screen and (max-width: 1050px) {
         max-width: fit-content;
         margin: auto;
+        margin-bottom: 200px;
 
         h1,span {
             font-size: 27px;
