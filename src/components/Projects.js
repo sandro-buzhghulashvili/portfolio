@@ -7,7 +7,7 @@ import { PROJECTS } from '../assets/PROJECTS';
 import { Link } from 'react-router-dom';
 
 const Projects = () => {
-  const allProjects = PROJECTS.map((project) => {
+  const allProjects = PROJECTS.slice(0, 4).map((project) => {
     return (
       <Project
         key={project.id}
