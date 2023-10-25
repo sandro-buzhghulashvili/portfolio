@@ -52,7 +52,7 @@ const Navbar = ({ hideSections }) => {
             <li onClick={() => scrollToSection('projects')}>
               <a href="#nav">Projects</a>
             </li>
-            <li onClick={() => scrollToSection()}>
+            <li onClick={() => scrollToSection('footerContactSection')}>
               <a href="#nav">Contact</a>
             </li>
           </>
