@@ -29,10 +29,10 @@ const Hero = () => {
               look great but also function flawlessly.
             </motion.p>
             <div>
-              <a href="#link">
+              <a href="https://www.linkedin.com/in/sandro-buzhghulashvili-701209238/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="#link">
+              <a href="https://github.com/sandro-buzhghulashvili" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>

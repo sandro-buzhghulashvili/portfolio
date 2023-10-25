@@ -22,10 +22,10 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.links}>
-          <a href="#github" className={classes.icon}>
+          <a href="https://www.linkedin.com/in/sandro-buzhghulashvili-701209238/" target="_blank" rel="noopener noreferrer" className={classes.icon}>
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="#github" className={classes.icon}>
+          <a href="https://github.com/sandro-buzhghulashvili" target="_blank" rel="noopener noreferrer" className={classes.icon}>
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
