@@ -1,5 +1,7 @@
 import React from 'react';
 
+import resumePdf from "../assets/resume.pdf"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -19,6 +21,7 @@ const Footer = () => {
             <a href="mailto:sbuzhghulashvili@gmail.com">
               sbuzhghulashvili@gmail.com
             </a>
+            <a href={resumePdf} download="resume">Download resume</a>
           </div>
         </div>
         <div className={classes.links}>

@@ -77,9 +77,9 @@
 
         img {
             width: 95%;
-            height: 360px;
             margin-bottom: 30px;
             border-radius: 25px;
+            object-fit: contain;
         }
     }
 
@@ -107,11 +107,6 @@
             .links {
                 margin-top: 30px;
             }
-        }
-
-        img {
-            height: 300px;
-            object-position: 50% 50%;
         }
     }
 }

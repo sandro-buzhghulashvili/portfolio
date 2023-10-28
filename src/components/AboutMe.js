@@ -20,7 +20,7 @@ const AboutMe = () => {
           <span>ABOUT ME</span>
           <h1>A dedicated Front-end Developer based in Georgia</h1>
           <p>
-            I am Sandro Buzhgulashvili, student and a passionate front-end web
+            I am Sandro Buzhgulashvili,a student and a passionate front-end web
             developer. My journey in the world of web development has equipped
             me with a strong command of essential technologies, including HTML,
             CSS, JavaScript, React, and Sass.Also i completed a coding bootcamp,
