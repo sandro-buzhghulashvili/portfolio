@@ -20,7 +20,7 @@ const Chart = () => {
       'REST',
       'AJAX',
       'Bootstrap',
-      'Github',
+      'Framer-motion',
     ];
 
     const options = {
