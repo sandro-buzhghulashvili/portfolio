@@ -25,6 +25,12 @@
         }
     }
 
+    @media screen and (min-width: 1050px) {
+        &:nth-of-type(2n) {
+            flex-direction: row-reverse;
+        }    
+    }
+
     .info {
         padding: 40px;
         text-align: center;
