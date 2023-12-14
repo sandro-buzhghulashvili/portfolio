@@ -1,14 +1,14 @@
-@import "./variables";
+@import './variables';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
 }
 
-@media screen and (min-width : 600px) {
-    * {
-        cursor: none;
-    }
+@media screen and (min-width: 800px) {
+  * {
+    cursor: none;
+  }
 }

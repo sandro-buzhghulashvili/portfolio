@@ -13,17 +13,42 @@ import tictactoeImg from '../assets/project-photos/tic-tac-toe.png';
 import caesarCipherImg from '../assets/project-photos/caesar-cipher.png';
 import ruftImg from '../assets/project-photos/ruft.png';
 import traveloImg from '../assets/project-photos/travelo.png';
+import classyAdsImg from '../assets/project-photos/classy-ads-thumbnail.png';
 
 export const PROJECTS = [
   {
     id: 'p1',
     title: 'CAR RENTAL',
-    description: `This is car rental website which allows users to rent cars for personal or business use. 
-    User experience is more delicated, as it offers interactive map features to select pick up and drop off locations.
-    All data comes from firebase realtime database, so every order or change that you make will be tracked and saved in real time`,
+    description: `This is a car rental website that enables users to rent cars for personal or business purposes.
+    It serves as a simulation of a full-stack application using Firebase. Primarily built on React, it incorporates additional features, including user authentication. 
+    The project also showcases proficiency in geo-coding through the integration of Mapbox APIs.
+    Furthermore, it demonstrates routine JavaScript skills by implementing features like pagination, API handling, error handling, and more.
+    `,
     img: carRentalImg,
     link: 'https://car-rental-6eaf1.firebaseapp.com',
     source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
+  },
+  {
+    id: 'p15',
+    title: 'Classy ADS',
+    description: `Classy Ads is a platform where users can both post and view advertisements. 
+    This project serves as a simulation of a full-stack application, employing React and Firebase technologies.
+    Within this endeavor, I incorporated the Framer Motion library to create animated sliders and modals. 
+    Additionally, I utilized React Router, Sass, and various other tools to enhance the overall user experience.`,
+    img: classyAdsImg,
+    link: 'https://classy-ads-8216b.web.app',
+    source: 'https://github.com/sandro-buzhghulashvili/classy-ads',
+  },
+  {
+    id: 'p3',
+    title: 'COINPULSE',
+    description: `
+    Welcome to our cutting-edge Crypto Search Web App! In this application, my primary focus is to showcase my skills in working with APIs. 
+    I extensively utilize various features of React routers, including loaders. This project is a simulation of a real-world application designed for individuals interested in cryptocurrency.
+    Additionally, it offers a meticulously crafted modern and responsive user experience.`,
+    img: coinPulseImg,
+    link: 'https://coinpulse-50f2d.web.app',
+    source: 'https://github.com/sandro-buzhghulashvili/coin-pulse-react',
   },
   {
     id: 'p2',
@@ -35,16 +60,6 @@ export const PROJECTS = [
     img: campMateImg,
     link: 'https://camp-mate.onrender.com/',
     source: 'https://github.com/sandro-buzhghulashvili/campmate-private',
-  },
-  {
-    id: 'p3',
-    title: 'COINPULSE',
-    description: `Welcome to our cutting-edge Crypto Search Web App! Designed with cryptocurrency enthusiasts and investors in mind, our platform is
-    your one-stop solution for staying informed in the dynamic world of digital assets.With our user-friendly interface, you can effortlessly check the latest market
-    updates and track specific currencies in real-time.`,
-    img: coinPulseImg,
-    link: 'https://coinpulse-50f2d.web.app',
-    source: 'https://github.com/sandro-buzhghulashvili/coin-pulse-react',
   },
   {
     id: 'p4',
