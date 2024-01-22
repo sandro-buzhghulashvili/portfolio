@@ -1,21 +1,21 @@
-$primary-font :'Roboto', sans-serif;
-$font-weights : (
-    "regular" : 400,
-    "medium" : 500,
-    "bold" : 700
+$primary-font: "Roboto", sans-serif;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
 );
-$primary-color : #2d2e32;
-$hover-color : #147efb;
-$media-queries : (
-    "medium" : 920px,
-    "small" : 517px
+$primary-color: #2d2e32;
+$hover-color: #147efb;
+$media-queries: (
+  "large": 1040px,
+  "medium": 920px,
+  "small": 517px,
 );
 
 @function query($query) {
-    @return map-get($media-queries, $query )
+  @return map-get($media-queries, $query);
 }
 
-
 @function weight($weight) {
-    @return map-get($font-weights, $weight )
+  @return map-get($font-weights, $weight);
 }

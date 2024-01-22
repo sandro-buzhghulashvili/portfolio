@@ -1,17 +1,17 @@
 @import "./scss_partials/reset";
 @import "./scss_partials/variables";
 
-.tagcloud .tagcloud{
-    font-weight: weight(bold);
-    width: 300px !important;
-    height: 300px !important;
+.tagcloud .tagcloud {
+  font-weight: weight(bold);
+  width: 300px !important;
+  height: 300px !important;
 }
 
 .tagcloud--item {
-    color: $primary-color;
-    transition: .7s;
+  color: $primary-color;
+  transition: 0.7s;
 
-    &:hover {
-        color: $hover-color;
-    }
+  &:hover {
+    color: $hover-color;
+  }
 }
