@@ -1,4 +1,4 @@
-@import "../scss_partials/variables";
+@import '../scss_partials/variables';
 
 .navbar {
   position: fixed;
@@ -28,7 +28,7 @@
     font-weight: weight(bold);
     text-decoration: none;
     cursor: pointer;
-    background: linear-gradient(to right, $primary-color, $hover-color);
+    background: linear-gradient(to right, $primary-color, $secondary-color);
     background-clip: text;
     -webkit-background-clip: text; /* For Safari */
     color: transparent;
@@ -54,7 +54,7 @@
 
         @media (min-width: query(small)) {
           &:hover {
-            color: $hover-color;
+            color: $secondary-color;
           }
         }
       }
@@ -75,13 +75,13 @@
         &:hover {
           &::after,
           &::before {
-            background-color: $hover-color;
+            background-color: $secondary-color;
           }
         }
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 0;
@@ -95,7 +95,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 0;
@@ -146,7 +146,7 @@
 
         @media (min-width: query(small)) {
           &:hover {
-            color: $hover-color;
+            color: $secondary-color;
           }
         }
       }

@@ -1,15 +1,18 @@
-$primary-font: "Roboto", sans-serif;
+$primary-font: 'Roboto', sans-serif;
 $font-weights: (
-  "regular": 400,
-  "medium": 500,
-  "bold": 700,
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
 );
 $primary-color: #2d2e32;
-$hover-color: #147efb;
+$secondary-color: #147efb;
+$typography-color: #0d0d0d;
+$secondary-typo-color: #4f5052;
+$accent-blue: #255ad4;
 $media-queries: (
-  "large": 1040px,
-  "medium": 920px,
-  "small": 517px,
+  'large': 1040px,
+  'medium': 920px,
+  'small': 517px,
 );
 
 @function query($query) {
@@ -18,4 +21,21 @@ $media-queries: (
 
 @function weight($weight) {
   @return map-get($font-weights, $weight);
+}
+
+@mixin container {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }

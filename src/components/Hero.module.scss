@@ -1,8 +1,9 @@
-@import "../scss_partials/variables";
+@import '../scss_partials/variables';
 .wave {
   width: 100%;
   height: 450px;
-  margin-bottom: 200px;
+  object-fit: cover;
+  margin-bottom: 100px;
 
   @media screen and (max-width: query(medium)) {
     height: 300px;
@@ -68,7 +69,11 @@
         margin-bottom: 30px;
         .gradient {
           display: block;
-          background: linear-gradient(to right, $primary-color, $hover-color);
+          background: linear-gradient(
+            to right,
+            $primary-color,
+            $secondary-color
+          );
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
@@ -88,7 +93,11 @@
         font-weight: weight(regular);
 
         .gradient {
-          background: linear-gradient(to right, $primary-color, $hover-color);
+          background: linear-gradient(
+            to right,
+            $primary-color,
+            $secondary-color
+          );
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
@@ -104,7 +113,7 @@
 
         @media (min-width: query(small)) {
           &:hover {
-            color: $hover-color;
+            color: $secondary-color;
           }
         }
       }

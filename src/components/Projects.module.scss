@@ -1,64 +1,65 @@
-@import "../scss_partials/variables";
+@import '../scss_partials/variables';
 
 .projects {
-    max-width: 1024px;
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 300px;
+  color: $primary-color;
+
+  .show-projects {
+    display: block;
     margin: auto;
-    margin-bottom: 300px;
-    color: $primary-color;
+    width: fit-content;
+    text-decoration: none;
+    padding: 20px 30px;
+    border: 2px solid $secondary-color;
+    font-weight: weight(bold);
+    color: $secondary-color;
+    border-radius: 20px;
+    transition: 0.5s;
 
-    .show-projects {
-        display: block;
-        margin: auto;
-        width: fit-content;
-        text-decoration: none;
-        padding: 20px 30px;
-        border: 2px solid $hover-color;
-        font-weight: weight(bold);
-        color: $hover-color;
-        border-radius: 20px;
-        transition:  .5s;
-
-        @media(min-width: query(small)) {
-            &:hover {
-                background-color: $hover-color;
-                color: #fff;
-            }
-        }
+    @media (min-width: query(small)) {
+      &:hover {
+        background-color: $secondary-color;
+        color: #fff;
+      }
     }
+  }
 
+  span {
+    display: inline-block;
+    color: $secondary-color;
+    font-weight: weight(bold);
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+    font-weight: weight(bold);
+    margin-bottom: 100px;
+  }
+
+  // Responsive
+
+  @media screen and (max-width: 1050px) {
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 200px;
+
+    h1,
     span {
-        display: inline-block;
-        color: $hover-color;
-        font-weight: weight(bold);
-        font-size: 18px;
-        margin-bottom: 15px;
+      font-size: 27px;
     }
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 95%;
+    text-align: center;
 
     h1 {
-        font-size: 25px;
-        font-weight: weight(bold);
-        margin-bottom: 100px;
+      font-size: 23px;
+      margin-bottom: 50px;
     }
-
-    // Responsive 
-
-    @media screen and (max-width: 1050px) {
-        max-width: fit-content;
-        margin: auto;
-        margin-bottom: 200px;
-
-        h1,span {
-            font-size: 27px;
-        }
-    }
-
-    @media screen and (max-width : 650px){
-        width: 95%;
-        text-align: center;
-
-        h1 {
-            font-size: 23px;
-            margin-bottom: 50px;
-        }
-    }
+  }
 }
