@@ -7,8 +7,8 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 const AboutMe = () => {
   const { scrollY } = useScroll();
-  const aboutScale = useTransform(scrollY, [1500, 1900], [1, 0.8]);
-  console.log(scrollY);
+  const aboutScale = useTransform(scrollY, [1500, 1700], [1, 0.8]);
+
   return (
     <>
       <motion.div

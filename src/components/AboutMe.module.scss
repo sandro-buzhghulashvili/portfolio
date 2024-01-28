@@ -9,16 +9,19 @@
   padding-top: 200px;
   display: flex;
   margin: auto;
-  margin-bottom: 150px;
   overflow: hidden;
   p {
     color: $secondary-typo-color;
   }
 
+  @media screen and (min-width: 1024px) {
+    max-width: 75% !important;
+  }
+
   .reference {
     margin-bottom: 150px;
     font-size: 19px;
-    width: 80%;
+    width: 60%;
     line-height: 30px;
   }
 

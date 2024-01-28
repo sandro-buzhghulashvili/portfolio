@@ -61,9 +61,9 @@ const Hero = () => {
               </div>
             </motion.div>
             <motion.img
-              initial={{ opacity: 0, translateX: 300 }}
+              initial={{ opacity: 0, translateX: 600 }}
               animate={{ opacity: 1, translateX: 0 }}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 0.8 }}
               src={heroImg}
               alt="hero"
             />
