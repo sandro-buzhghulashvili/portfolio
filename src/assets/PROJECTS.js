@@ -12,17 +12,26 @@ import expensesApp from '../assets/project-photos/expenses=app.png';
 import tictactoeImg from '../assets/project-photos/tic-tac-toe.png';
 import caesarCipherImg from '../assets/project-photos/caesar-cipher.png';
 import ruftImg from '../assets/project-photos/ruft.png';
-import traveloImg from '../assets/project-photos/travelo.png';
 import classyAdsImg from '../assets/project-photos/classy-ads-thumbnail.png';
-import easyFeastImg from './project-photos/food-order.png';
+import easyFeastImg from './project-photos/easy-feast.png';
 
 export const PROJECTS = [
   {
     id: 'easy-feast-v1',
     title: 'EASY FEAST',
     description:
-      'A React-based B2C food ordering app with real-time updates, address management, and optional addons. I developed the frontend using React, TypeScript, Firebase, and styled it with Tailwind CSS. Focused on user-friendly features and efficient order management.',
+      'B2C food ordering app with real-time updates, address management, and optional addons. Frontend developed in React, TypeScript, Firebase, styled with Tailwind CSS for user-friendly features and efficient order management.',
     img: easyFeastImg,
+    link: 'https://easy-feast.web.app/',
+    source: 'https://github.com/sandro-buzhghulashvili/easy-feast',
+    techStack: [
+      'reactjs',
+      'typescript',
+      'tailwind',
+      'framer-motion',
+      'chartjs',
+    ],
+    disclaimer: 'Admin credentials: username - admin, password - admin5',
   },
   {
     id: 'p1',
@@ -62,6 +71,8 @@ export const PROJECTS = [
     link: 'https://camp-mate.onrender.com/',
     source: 'https://github.com/sandro-buzhghulashvili/campmate-private',
     techStack: ['nodejs', 'express', 'bootstrap', 'mongodb'],
+    disclaimer:
+      'This fullstack app is hosted on free service and it might take a while to load',
   },
   {
     id: 'p4',
@@ -71,6 +82,7 @@ export const PROJECTS = [
     img: todoAppImg,
     link: 'https://todo-app-683e5.web.app',
     source: 'https://github.com/sandro-buzhghulashvili/todo-react',
+    techStack: ['html', 'css', 'javascript', 'local storage'],
   },
   {
     id: 'p15',
@@ -143,12 +155,5 @@ export const PROJECTS = [
     img: ruftImg,
     link: 'https://ruft-sbji.netlify.app',
     source: 'https://github.com/sandro-buzhghulashvili/ruft-ui-html',
-  },
-  {
-    id: 'p14',
-    title: 'TRAVELO(landing page)',
-    img: traveloImg,
-    link: 'https://gilded-tapioca-29dc10.netlify.app',
-    source: 'https://github.com/sandro-buzhghulashvili/travelo-html',
   },
 ];
