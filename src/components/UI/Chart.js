@@ -16,9 +16,9 @@ const Chart = () => {
       'React Router',
       'React Redux',
       'Git',
-      'JSON',
-      'REST',
-      'AJAX',
+      'TypeScript',
+      'Tailwind',
+      'Firebase',
       'Bootstrap',
       'Framer-motion',
     ];

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import classes from './Navbar.module.scss';
+import classes from "./Navbar.module.scss";
 
 const Navbar = ({ hideSections }) => {
   const [toggleNavbar, setToggleNavbar] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = ({ hideSections }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -22,42 +22,44 @@ const Navbar = ({ hideSections }) => {
 
     const sectionContainer = document.getElementById(section);
 
-    if (section === 'home') {
+    if (section === "home") {
       scrollToTop();
     } else {
-      sectionContainer.scrollIntoView({ behavior: 'smooth' });
+      sectionContainer.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <div className={classes.navbar}>
-      <h1 onClick={scrollToTop} className={classes.header}>
-        Sandro.bgi
-      </h1>
-      <span
-        onClick={toggleNavbarHandler}
-        className={`${classes.menu} ${
-          toggleNavbar ? classes.close : undefined
-        }`}
-      ></span>
-      <ul className={toggleNavbar ? classes.toggle : undefined}>
-        <li onClick={() => scrollToSection('home')}>
-          <Link to="/">Home</Link>
-        </li>
-        {!hideSections && (
-          <>
-            <li onClick={() => scrollToSection('aboutMe')}>
-              <a href="#nav">About</a>
-            </li>
-            <li onClick={() => scrollToSection('projects')}>
-              <a href="#nav">Projects</a>
-            </li>
-            <li onClick={() => scrollToSection('footerContactSection')}>
-              <a href="#nav">Contact</a>
-            </li>
-          </>
-        )}
-      </ul>
+      <div className={classes["nav"]}>
+        <Link to='/' onClick={scrollToTop} className={classes.header}>
+          Sandro.bgi
+        </Link>
+        <span
+          onClick={toggleNavbarHandler}
+          className={`${classes.menu} ${
+            toggleNavbar ? classes.close : undefined
+          }`}
+        ></span>
+        <ul className={toggleNavbar ? classes.toggle : undefined}>
+          <li onClick={() => scrollToSection("home")}>
+            <Link to='/'>Home</Link>
+          </li>
+          {!hideSections && (
+            <>
+              <li onClick={() => scrollToSection("aboutMe")}>
+                <a href='#nav'>About</a>
+              </li>
+              <li onClick={() => scrollToSection("projects")}>
+                <a href='#nav'>Projects</a>
+              </li>
+              <li onClick={() => scrollToSection("footerContactSection")}>
+                <a href='#nav'>Contact</a>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };

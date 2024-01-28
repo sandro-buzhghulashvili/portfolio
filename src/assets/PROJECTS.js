@@ -12,54 +12,67 @@ import expensesApp from '../assets/project-photos/expenses=app.png';
 import tictactoeImg from '../assets/project-photos/tic-tac-toe.png';
 import caesarCipherImg from '../assets/project-photos/caesar-cipher.png';
 import ruftImg from '../assets/project-photos/ruft.png';
-import traveloImg from '../assets/project-photos/travelo.png';
 import classyAdsImg from '../assets/project-photos/classy-ads-thumbnail.png';
+import easyFeastImg from './project-photos/easy-feast.png';
 
 export const PROJECTS = [
   {
+    id: 'easy-feast-v1',
+    title: 'EASY FEAST',
+    description:
+      'B2C food ordering app with real-time updates, address management, and optional addons. Frontend developed in React, TypeScript, Firebase, styled with Tailwind CSS for user-friendly features and efficient order management.',
+    img: easyFeastImg,
+    link: 'https://easy-feast.web.app/',
+    source: 'https://github.com/sandro-buzhghulashvili/easy-feast',
+    techStack: [
+      'reactjs',
+      'typescript',
+      'tailwind',
+      'framer-motion',
+      'chartjs',
+    ],
+    disclaimer: 'Admin credentials: username - admin, password - admin5',
+  },
+  {
     id: 'p1',
     title: 'CAR RENTAL',
-    description: `This is a car rental website that enables users to rent cars for personal or business purposes.
-    It serves as a simulation of a full-stack application using Firebase. Primarily built on React, it incorporates additional features, including user authentication. 
-    The project also showcases proficiency in geo-coding through the integration of Mapbox APIs.
-    Furthermore, it demonstrates routine JavaScript skills by implementing features like pagination, API handling, error handling, and more.
-    `,
+    description:
+      'Welcome to our user-friendly Car Rental Website! Easily rent cars for personal or business use, with options for short trips or extended rentals. Find the perfect vehicle to meet your needs effortlessly.',
     img: carRentalImg,
     link: 'https://car-rental-6eaf1.firebaseapp.com',
     source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
+    techStack: ['reactjs', 'scss', 'mapbox', 'firebase'],
   },
   {
     id: 'p15',
     title: 'Classy ADS',
-    description: `Classy Ads is a platform where users can both post and view advertisements. 
-    This project serves as a simulation of a full-stack application, employing React and Firebase technologies.
-    Within this endeavor, I incorporated the Framer Motion library to create animated sliders and modals. 
-    Additionally, I utilized React Router, Sass, and various other tools to enhance the overall user experience.`,
+    description:
+      'A stylish, full-stack platform for seamless ad posting and viewing. Built with React and Firebase, it boasts animated elements, smooth navigation with React Router, and elegant Sass styling. Experience dynamic ads effortlessly.',
     img: classyAdsImg,
     link: 'https://classy-ads-8216b.web.app',
     source: 'https://github.com/sandro-buzhghulashvili/classy-ads',
+    techStack: ['reactjs', 'scss', 'framer-motion', 'redux', 'firebase'],
   },
   {
     id: 'p3',
     title: 'COINPULSE',
-    description: `
-    Welcome to our cutting-edge Crypto Search Web App! In this application, my primary focus is to showcase my skills in working with APIs. 
-    I extensively utilize various features of React routers, including loaders. This project is a simulation of a real-world application designed for individuals interested in cryptocurrency.
-    Additionally, it offers a meticulously crafted modern and responsive user experience.`,
+    description: `Welcome to our Crypto Search Web App! I showcase my API skills through React routers, including loaders. This app simulates a real-world cryptocurrency tool, offering a modern and responsive user experience.    `,
     img: coinPulseImg,
     link: 'https://coinpulse-50f2d.web.app',
     source: 'https://github.com/sandro-buzhghulashvili/coin-pulse-react',
+    techStack: ['reactjs', 'css', 'rest-api'],
   },
   {
     id: 'p2',
     title: 'CAMP MATE',
-    description: `Camp Mate is an innovative online platform designed to cater to outdoor enthusiasts and adventure seekers, offering a user-friendly space to discover, 
-      share, and rate exciting campgrounds in their vicinity. Whether you're a seasoned camper or a novice explorer, Camp Mate is your ultimate 
-      companion for an unforgettable outdoor experience. App also includes full stack features, mainly node and mongodb, so you need to register
-       with fake(temporary) email`,
+    description:
+      'Camp Mate: Explore, share, and rate nearby campgrounds. Your ultimate companion for outdoor adventures. Register with a temporary email for full-stack features powered by Node and MongoDB.',
     img: campMateImg,
     link: 'https://camp-mate.onrender.com/',
     source: 'https://github.com/sandro-buzhghulashvili/campmate-private',
+    techStack: ['nodejs', 'express', 'bootstrap', 'mongodb'],
+    disclaimer:
+      'This fullstack app is hosted on free service and it might take a while to load',
   },
   {
     id: 'p4',
@@ -69,6 +82,7 @@ export const PROJECTS = [
     img: todoAppImg,
     link: 'https://todo-app-683e5.web.app',
     source: 'https://github.com/sandro-buzhghulashvili/todo-react',
+    techStack: ['html', 'css', 'javascript', 'local storage'],
   },
   {
     id: 'p15',
@@ -141,12 +155,5 @@ export const PROJECTS = [
     img: ruftImg,
     link: 'https://ruft-sbji.netlify.app',
     source: 'https://github.com/sandro-buzhghulashvili/ruft-ui-html',
-  },
-  {
-    id: 'p14',
-    title: 'TRAVELO(landing page)',
-    img: traveloImg,
-    link: 'https://gilded-tapioca-29dc10.netlify.app',
-    source: 'https://github.com/sandro-buzhghulashvili/travelo-html',
   },
 ];

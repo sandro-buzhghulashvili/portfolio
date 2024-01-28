@@ -1,37 +1,40 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Chart from './UI/Chart';
-
-import illustration from '../assets/illustration1.jpg';
+import waveImg from '../assets/wave2.png';
 
 import classes from './AboutMe.module.scss';
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 const AboutMe = () => {
+  const { scrollY } = useScroll();
+  const aboutScale = useTransform(scrollY, [1500, 1700], [1, 0.8]);
+
   return (
     <>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className={classes.about}
+        style={{ scale: aboutScale }}
+        initial={{ y: 400, opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className={`${classes.about}`}
         id="aboutMe"
       >
-        <img src={illustration} alt="illustration" />
-        <div className={classes.card}>
-          <span>ABOUT ME</span>
-          <h1>A dedicated Front-end Developer based in Georgia</h1>
-          <p>
-            I am Sandro Buzhgulashvili,a student and a passionate front-end web
-            developer. My journey in the world of web development has equipped
-            me with a strong command of essential technologies, including HTML,
-            CSS, JavaScript, React, and Sass.Also i completed a coding bootcamp,
-            where i got basic understanding of Angular, Node.js, Express, and
-            MongoDB. I'm currently focused on enhancing my React skills and have
-            aspirations to become a MERN stack developer in the future. Explore
-            my portfolio to see my work and my journey in web development.
+        <div>
+          <p className={classes.caption}>INTRODUCTION</p>
+          <h1>Overview.</h1>
+          <p className={classes.reference}>
+            I am a proficient software developer with a strong background in
+            JavaScript and TypeScript, specializing in framework such as React.
+            Having successfully completed coding bootcamps, I gained a solid
+            foundation in Angular, Node.js, Express, and MongoDB, further
+            enriching my capabilities. I'm a quick learner and collaborate
+            closely with clients to create efficient, scalable, and
+            user-friendly solutions that solve real-world problems.
           </p>
         </div>
+        <Chart />
       </motion.div>
-      <Chart />
+      <img src={waveImg} alt="wave" className={classes.wave} />
     </>
   );
 };
