@@ -13,7 +13,7 @@ const AboutMe = () => {
     <>
       <motion.div
         style={{ scale: aboutScale }}
-        initial={{ y: 400, opacity: 0 }}
+        initial={{ y: 0, opacity: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className={`${classes.about}`}

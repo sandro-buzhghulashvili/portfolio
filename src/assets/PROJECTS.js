@@ -13,7 +13,7 @@ import tictactoeImg from '../assets/project-photos/tic-tac-toe.png';
 import caesarCipherImg from '../assets/project-photos/caesar-cipher.png';
 import ruftImg from '../assets/project-photos/ruft.png';
 import classyAdsImg from '../assets/project-photos/classy-ads-thumbnail.png';
-import easyFeastImg from './project-photos/easy-feast.png';
+import easyFeastImg from './project-photos/easy-feast.PNG';
 
 export const PROJECTS = [
   {
