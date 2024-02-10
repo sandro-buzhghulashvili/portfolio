@@ -14,6 +14,7 @@ import caesarCipherImg from '../assets/project-photos/caesar-cipher.png';
 import ruftImg from '../assets/project-photos/ruft.png';
 import classyAdsImg from '../assets/project-photos/classy-ads-thumbnail.png';
 import easyFeastImg from './project-photos/easy-feast.PNG';
+import tictactoeminimaxImg from './project-photos/tic-tac-toe-minimax.png';
 
 export const PROJECTS = [
   {
@@ -42,6 +43,16 @@ export const PROJECTS = [
     link: 'https://car-rental-6eaf1.firebaseapp.com',
     source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
     techStack: ['reactjs', 'scss', 'mapbox', 'firebase'],
+  },
+  {
+    id: 'tictactoe1',
+    title: 'TIC TAC TOE(Minimax - AI)',
+    description:
+      "Welcome to my TicTacToe project! It's classic gameplay with a modern twist, featuring a powerful AI, multiplayer mode, and customizable skins. With sleek UI and animations, this project showcases my frontend skills.",
+    img: tictactoeminimaxImg,
+    link: 'https://tic-tac-toe-minimax-cb641.web.app/',
+    source: 'https://github.com/sandro-buzhghulashvili/tic-tac-toe-AI',
+    techStack: ['reactjs', 'redux/redux-toolkit', 'tailwind', 'framer-motion'],
   },
   {
     id: 'p15',
