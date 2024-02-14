@@ -28,7 +28,7 @@ const DevTree = () => {
               <motion.span
                 initial={{ opacity: 0, scale: 0.3 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 className={classes.badge}
               >
                 <img src={coltCourseBadge} alt="badge" />
@@ -36,7 +36,7 @@ const DevTree = () => {
               <motion.div
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className={classes.content}
               >
                 <span className={`${classes.pin} ${classes.right}`}></span>
@@ -60,7 +60,7 @@ const DevTree = () => {
               <motion.span
                 initial={{ opacity: 0, scale: 0.3 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 className={classes.badge}
               >
                 <img src={itStepBadge} alt="badge" />
@@ -68,7 +68,7 @@ const DevTree = () => {
               <motion.div
                 initial={{ opacity: 0, x: 200 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className={classes.content}
               >
                 {/* <span className={`${classes.pin} ${classes.right}`}></span> */}
@@ -94,7 +94,7 @@ const DevTree = () => {
               <motion.span
                 initial={{ opacity: 0, scale: 0.3 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 className={classes.badge}
               >
                 <img src={maxCourseBage} alt="badge" />
@@ -102,7 +102,7 @@ const DevTree = () => {
               <motion.div
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className={classes.content}
               >
                 <span className={`${classes.pin} ${classes.right}`}></span>
@@ -129,7 +129,7 @@ const DevTree = () => {
               <motion.span
                 initial={{ opacity: 0, scale: 0.3 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 className={classes.badge}
               >
                 <img
@@ -141,7 +141,7 @@ const DevTree = () => {
               <motion.div
                 initial={{ opacity: 0, x: 200 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className={classes.content}
               >
                 {/* <span className={`${classes.pin} ${classes.right}`}></span> */}
