@@ -23,13 +23,17 @@ const AboutMe = () => {
           <p className={classes.caption}>INTRODUCTION</p>
           <h1>Overview.</h1>
           <p className={classes.reference}>
-            I am a proficient software developer with a strong background in
-            JavaScript and TypeScript, specializing in framework such as React.
-            Having successfully completed coding bootcamps, I gained a solid
-            foundation in Angular, Node.js, Express, and MongoDB, further
-            enriching my capabilities. I'm a quick learner and collaborate
-            closely with clients to create efficient, scalable, and
-            user-friendly solutions that solve real-world problems.
+            I am a software developer with a background in Python and
+            JavaScript/TypeScript. Having successfully completed numerous
+            projects, I have gained a solid foundation in full-stack
+            development, working with technologies such as React.js, Next.js,
+            the MERN stack, Flask, and SQL. I have good experience with version
+            control systems such as Git, and I can write GitHub Actions and
+            simple workflows. I also have experience with WebSockets, both on
+            the front-end and back-end. As an 18-year-old student, I am striving
+            to learn more about computer science, master core algorithms and
+            data structures on LeetCode, and gather professional experience
+            through real-world projects.
           </p>
         </div>
         <Chart />

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-import classes from "./Navbar.module.scss";
+import classes from './Navbar.module.scss';
 
 const Navbar = ({ hideSections }) => {
+  const location = useLocation();
   const [toggleNavbar, setToggleNavbar] = useState(false);
 
   const toggleNavbarHandler = () => {
@@ -13,7 +14,7 @@ const Navbar = ({ hideSections }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -22,17 +23,21 @@ const Navbar = ({ hideSections }) => {
 
     const sectionContainer = document.getElementById(section);
 
-    if (section === "home") {
+    if (section === 'home') {
       scrollToTop();
     } else {
-      sectionContainer.scrollIntoView({ behavior: "smooth" });
+      sectionContainer.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+  useEffect(() => {
+    if (location.pathname.startsWith('/projects')) scrollToTop();
+  }, [location]);
+
   return (
     <div className={classes.navbar}>
-      <div className={classes["nav"]}>
-        <Link to='/' onClick={scrollToTop} className={classes.header}>
+      <div className={classes['nav']}>
+        <Link to="/" onClick={scrollToTop} className={classes.header}>
           Sandro.bgi
         </Link>
         <span
@@ -42,19 +47,23 @@ const Navbar = ({ hideSections }) => {
           }`}
         ></span>
         <ul className={toggleNavbar ? classes.toggle : undefined}>
-          <li onClick={() => scrollToSection("home")}>
-            <Link to='/'>Home</Link>
+          <li onClick={() => scrollToSection('home')}>
+            <Link to="/">Home</Link>
           </li>
           {!hideSections && (
             <>
-              <li onClick={() => scrollToSection("aboutMe")}>
-                <a href='#nav'>About</a>
-              </li>
-              <li onClick={() => scrollToSection("projects")}>
-                <a href='#nav'>Projects</a>
-              </li>
-              <li onClick={() => scrollToSection("footerContactSection")}>
-                <a href='#nav'>Contact</a>
+              {location.pathname === '/' && (
+                <>
+                  <li onClick={() => scrollToSection('aboutMe')}>
+                    <a href="#nav">About</a>
+                  </li>
+                  <li onClick={() => scrollToSection('projects')}>
+                    <a href="#nav">Projects</a>
+                  </li>
+                </>
+              )}
+              <li onClick={() => scrollToSection('footerContactSection')}>
+                <a href="#nav">Contact</a>
               </li>
             </>
           )}

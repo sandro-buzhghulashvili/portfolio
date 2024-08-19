@@ -10,17 +10,17 @@ const Chart = () => {
     const texts = [
       'HTML',
       'CSS',
-      'SASS',
+      'MongoDB',
       'JavaScript',
       'React',
-      'React Router',
-      'React Redux',
+      'Flask',
+      'Redux',
       'Git',
       'TypeScript',
-      'Tailwind',
-      'Firebase',
-      'Bootstrap',
-      'Framer-motion',
+      'SQL',
+      'Python',
+      'Node.js',
+      'Next.js',
     ];
 
     const options = {

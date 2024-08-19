@@ -1,6 +1,13 @@
 @import './scss_partials/reset';
 @import './scss_partials/variables';
 
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 102px;
+  padding-bottom: 206px;
+}
+
 .tagcloud .tagcloud {
   font-weight: weight(bold);
   width: 300px !important;

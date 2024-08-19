@@ -5,28 +5,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import classes from './Projects.module.scss';
+import { Link } from 'react-router-dom';
 
-const Projects2 = ({ projects }) => {
+const Projects2 = ({ projects, disableTitle = null, projectCount = 3 }) => {
   const skillColors = ['#ec008c', '#255ad4', '#0d0d0d', '#11998e', '##11998e'];
-  const mainProjects = projects.slice(0, 6);
+  const mainProjects = projects.slice(0, projectCount);
   console.log(mainProjects);
   return (
     <div className={classes.projects} id="projects">
-      <motion.div
-        initial={{ opacity: 0, y: 200 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={classes.info}
-      >
-        <p className={classes.caption}>MY WORK</p>
-        <h1 className={classes.title}>Projects.</h1>
-        <p className={classes.description}>
-          The goal of the following projects is to showcase my skills and
-          experience.Each example is briefly described, and with links to code
-          repositories. projects were created some time ago and I am in the
-          process of creating something more advanced and refined. Stay tuned!
-        </p>
-      </motion.div>
+      {!disableTitle && (
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className={classes.info}
+        >
+          <p className={classes.caption}>MY WORK</p>
+          <h1 className={classes.title}>Projects.</h1>
+          <p className={classes.description}>
+            The goal of the following projects is to showcase my skills and
+            experience.Each example is briefly described, and with links to code
+            repositories. projects were created some time ago and I am in the
+            process of creating something more advanced and refined. Stay tuned!
+          </p>
+        </motion.div>
+      )}
       <motion.div
         variants={{
           hidden: { opacity: 0 },
@@ -93,6 +96,11 @@ const Projects2 = ({ projects }) => {
           );
         })}
       </motion.div>
+      {!disableTitle && (
+        <div className={classes.link}>
+          <Link to={'projects'}>See more projects</Link>
+        </div>
+      )}
     </div>
   );
 };

@@ -6,8 +6,8 @@ import waveImg from '../assets/wave3.png';
 
 import coltCourseBadge from '../assets/dev-tree/2021.jpg';
 import itStepBadge from '../assets/dev-tree/it-step.png';
-import maxCourseBage from '../assets/dev-tree/max.png';
 import btuBadge from '../assets/dev-tree/btu.svg';
+import spaceLinkBadge from '../assets/dev-tree/spacelink.jfif';
 
 const DevTree = () => {
   return (
@@ -20,7 +20,7 @@ const DevTree = () => {
             transition={{ duration: 1 }}
           >
             <p className={classes.caption}>WHAT I HAVE DONE SO FAR</p>
-            <h1 className={classes.title}>Development Tree.</h1>
+            <h1 className={classes.title}>Experience.</h1>
           </motion.div>
           <div className={classes.tree}>
             <div className={classes.post}></div>
@@ -97,41 +97,6 @@ const DevTree = () => {
                 transition={{ duration: 0.5 }}
                 className={classes.badge}
               >
-                <img src={maxCourseBage} alt="badge" />
-              </motion.span>
-              <motion.div
-                initial={{ opacity: 0, x: -200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className={classes.content}
-              >
-                <span className={`${classes.pin} ${classes.right}`}></span>
-                {/* <span className={`${classes.pin} ${classes.left}`}></span> */}
-                <h2>React - The Complete Guide</h2>
-                <p>Maximilian Schwarzmüller</p>
-                <ul>
-                  <li>
-                    Devoted effort to mastering React, gaining expertise in both
-                    class-based and function-based approaches. Explored core
-                    hooks, contexts, and delved into advanced concepts.
-                  </li>
-                  <li>
-                    Explored React Router and React Redux, mastering the
-                    integration of React with TypeScript. Additionally, delved
-                    into Sass, Tailwind, and Framer Motion for enhanced styling
-                    and animation capabilities.
-                  </li>
-                  <li>2023</li>
-                </ul>
-              </motion.div>
-            </div>
-            <div className={classes.stage}>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.3 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className={classes.badge}
-              >
                 <img
                   src={btuBadge}
                   alt="badge"
@@ -139,13 +104,13 @@ const DevTree = () => {
                 />
               </motion.span>
               <motion.div
-                initial={{ opacity: 0, x: 200 }}
+                initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 className={classes.content}
               >
                 {/* <span className={`${classes.pin} ${classes.right}`}></span> */}
-                <span className={`${classes.pin} ${classes.left}`}></span>
+                <span className={`${classes.pin} ${classes.right}`}></span>
                 <h2>BTU - Information Technologies</h2>
                 <p>Business and Technology University</p>
                 <ul>
@@ -159,6 +124,37 @@ const DevTree = () => {
                     further enhance my skill set.
                   </li>
                   <li>2023 - Present</li>
+                </ul>
+              </motion.div>
+            </div>
+            <div className={classes.stage}>
+              <motion.span
+                initial={{ opacity: 0, scale: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className={classes.badge}
+              >
+                <img src={spaceLinkBadge} alt="badge" />
+              </motion.span>
+              <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                className={classes.content}
+              >
+                {/* <span className={`${classes.pin} ${classes.right}`}></span> */}
+                <span className={`${classes.pin} ${classes.left}`}></span>
+                <h2>Spacelink - Next.js developer</h2>
+                <p>Spacelink</p>
+                <ul>
+                  <li>
+                    I have been deeply involved in developing full-stack
+                    applications, where I have implemented both front-end and
+                    back-end features. My work includes integrating WebSockets
+                    and utilizing various libraries to enhance functionality and
+                    performance.
+                  </li>
+                  <li>2024</li>
                 </ul>
               </motion.div>
             </div>

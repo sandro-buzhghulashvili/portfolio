@@ -35,14 +35,16 @@ export const PROJECTS = [
     disclaimer: 'Admin credentials: username - admin, password - admin5',
   },
   {
-    id: 'p1',
-    title: 'CAR RENTAL',
+    id: 'p2',
+    title: 'CAMP MATE',
     description:
-      'Welcome to our user-friendly Car Rental Website! Easily rent cars for personal or business use, with options for short trips or extended rentals. Find the perfect vehicle to meet your needs effortlessly.',
-    img: carRentalImg,
-    link: 'https://car-rental-6eaf1.firebaseapp.com',
-    source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
-    techStack: ['reactjs', 'scss', 'mapbox', 'firebase'],
+      'Camp Mate: Explore, share, and rate nearby campgrounds. Your ultimate companion for outdoor adventures. Register with a temporary email for full-stack features powered by Node and MongoDB.',
+    img: campMateImg,
+    link: 'https://camp-mate.onrender.com/',
+    source: 'https://github.com/sandro-buzhghulashvili/campmate-private',
+    techStack: ['nodejs', 'express', 'bootstrap', 'mongodb'],
+    disclaimer:
+      'This fullstack app is hosted on free service and it might take a while to load',
   },
   {
     id: 'tictactoe1',
@@ -73,17 +75,16 @@ export const PROJECTS = [
     source: 'https://github.com/sandro-buzhghulashvili/coin-pulse-react',
     techStack: ['reactjs', 'css', 'rest-api'],
   },
+
   {
-    id: 'p2',
-    title: 'CAMP MATE',
+    id: 'p1',
+    title: 'CAR RENTAL',
     description:
-      'Camp Mate: Explore, share, and rate nearby campgrounds. Your ultimate companion for outdoor adventures. Register with a temporary email for full-stack features powered by Node and MongoDB.',
-    img: campMateImg,
-    link: 'https://camp-mate.onrender.com/',
-    source: 'https://github.com/sandro-buzhghulashvili/campmate-private',
-    techStack: ['nodejs', 'express', 'bootstrap', 'mongodb'],
-    disclaimer:
-      'This fullstack app is hosted on free service and it might take a while to load',
+      'Welcome to our user-friendly Car Rental Website! Easily rent cars for personal or business use, with options for short trips or extended rentals. Find the perfect vehicle to meet your needs effortlessly.',
+    img: carRentalImg,
+    link: 'https://car-rental-6eaf1.firebaseapp.com',
+    source: 'https://github.com/sandro-buzhghulashvili/car-rental-react',
+    techStack: ['reactjs', 'scss', 'mapbox', 'firebase'],
   },
   {
     id: 'p4',

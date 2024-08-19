@@ -34,13 +34,13 @@ const Hero = () => {
                 <h1>
                   Hello ! 👋{' '}
                   <span className={classes['gradient']}>I'm Sandro</span>{' '}
-                  <span className={classes['stroked']}>Frontend Developer</span>
+                  <span className={classes['stroked']}>Web Developer</span>
                 </h1>
                 <p>
-                  Hi,I'm Sandro Buzhgulashvili. A passionate Front-end{' '}
-                  <span className={classes.gradient}>React </span>
-                  Developer. I'm dedicated to creating web solutions that not
-                  only look great but also function flawlessly.
+                  Hi,I'm Sandro Buzhgulashvili. A passionate
+                  <span className={classes.gradient}> Web Developer </span>. I'm
+                  dedicated to creating software solutions that not only look
+                  great but also function flawlessly.
                 </p>
               </motion.div>
               <div>
